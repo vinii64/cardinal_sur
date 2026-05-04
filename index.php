@@ -1,5 +1,5 @@
 <?php
-  
+
 ?>
 <!DOCTYPE html>
 <html lang="en">
@@ -8,6 +8,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Cardinal Sur</title>
     <link rel="stylesheet" href="styles/style.css">
+    <link rel="icon" type="image/x-icon" href="assets/favicon.png">
 </head>
 <body>
     
@@ -33,6 +34,11 @@
 
 </div>
 
+
+
+<div class="caja">
+  <img src="assets/logo.png" class="imagen" />
+</div>
 
 <script src="script.js"></script>
 </body>

@@ -56,3 +56,16 @@ body {
   font-weight: bold;
   color: #fd5c01;
 }
+
+
+.caja {
+  display: flex;
+  justify-content: center; 
+  align-items: center;    
+  height: 100vh;           
+}
+
+.imagen {
+
+  max-height: 60%;
+}
