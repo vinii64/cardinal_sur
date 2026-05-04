@@ -1,0 +1,58 @@
+@font-face {
+  font-family: 'monofont';
+  src: url('assets/monofonto.otf');
+
+}
+* {
+  font-family: 'monofont', monospace;
+}
+
+body {
+  margin: 0;
+  
+  background-color: #3d3d3d;
+}
+/* NAVBAR */
+.navbar {
+  position: fixed; 
+  top: 0;
+  left: 0;
+  right: 0;
+  width: 100%;
+  background-color: #0b0b0b;
+  overflow: auto;
+}
+
+.navbar a {
+  float: left;
+  display: block;
+  padding: 12px;
+  font-size: 17px;
+  text-align: center;
+  color: white;
+  text-decoration: none;
+}
+
+.navbar a:hover {
+  background-color: #1a1a1a;
+}
+
+.menu {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  color: #fd5c01;
+}
+
+.icono {
+  width: 40px;
+  height: 40px;
+}
+
+.menu p {
+  margin: 0;
+  text-align: center;
+  font-weight: bold;
+  color: #fd5c01;
+}
