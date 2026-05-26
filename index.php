@@ -37,7 +37,7 @@
 
 
 
-<div class="header-container">
+<div class="headerContainer">
   <img src="assets/headerFoto.png" class="imagen" />
 </div>
 
@@ -45,7 +45,7 @@
 
   <div class="item">
     <img src="assets/fotoGaleria1.png" />
-    <div class="overlay"><p>TRAVESÍAS</p></div>
+    <div class="overlay"><p>GALERÍA</p></div>
   </div>
 
   <div class="item">
@@ -55,17 +55,17 @@
 
   <div class="item">
     <img src="assets/fotoGaleria3.png" />
-    <div class="overlay"><p>TRAVESÍAS</p></div>
+    <div class="overlay"><p>MAPAS</p></div>
   </div>
 
   <div class="item">
     <img src="assets/fotoGaleria4.png" />
-    <div class="overlay"><p>TRAVESÍAS</p></div>
+    <div class="overlay"><p>EVENTOS</p></div>
   </div>
 
   <div class="item">
     <img src="assets/fotoGaleria5.png" />
-    <div class="overlay"><p>TRAVESÍAS</p></div>
+    <div class="overlay"><p>PROXIMAMENTE</p></div>
   </div>
 
 </div>
