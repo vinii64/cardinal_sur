@@ -82,8 +82,6 @@ body {
 
 
 
-
-/* ----GALERIA DE IMAGENES ----*/
 .galeria {
   display: flex;
   gap: 8px;
@@ -129,8 +127,6 @@ body {
   opacity: 1;
 }
 
-/*----FOOTER-----*/
-
 footer {
   background: #1a1a1a;
   color: #888;
@@ -154,8 +150,6 @@ footer h3 {
   width: fit-content;
 }
 
-
-
 footer span {
   display: block;
   font-size: 11px;
@@ -172,7 +166,43 @@ footer a {
   margin-bottom: 10px;
   transition: color 0.2s;
 }
+.btnRegistro{
 
+    position: absolute;
+
+    top: 75%;
+
+    left: 50%;
+
+    transform: translate(-50%, -50%);
+
+    padding: 15px 35px;
+
+    background: #fd5c01;
+
+    color: black;
+
+    text-decoration: none;
+
+    font-size: 20px;
+
+    font-weight: bold;
+
+    border-radius: 10px;
+
+    transition: .3s;
+
+    z-index: 5;
+
+}
+
+.btnRegistro:hover{
+
+    background: #ff7b2f;
+
+    transform: translate(-50%, -50%) scale(1.05);
+
+}
 
 
 

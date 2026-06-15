@@ -28,10 +28,18 @@
     <img src="assets/map.svg" class="icono"> <p>TRAVESÍAS</p>
   </a>
 
+  <a class="menu" href="tienda.html">
+  <img src="assets/" class="icono">
+  <p>TIENDA</p>
+  </a>
+
   <a class="menu" href="">
     <img src="assets/help.svg" class="icono"> <p>ACERCA</p>
   </a>
             
+  <a href="login.php" class="btnRegistro">
+    REGÍSTRATE
+  </a>
 
 </div>
 
@@ -55,7 +63,7 @@
 
   <div class="item">
     <img src="assets/fotoGaleria3.png" />
-    <div class="overlay"><p>MAPAS</p></div>
+    <div class="overlay"><p>APORTES SOLIDARIOS</p></div>
   </div>
 
   <div class="item">
