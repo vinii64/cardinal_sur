@@ -1,5 +1,6 @@
 <?php
-
+session_start();
+include('conexion.php');
 ?>
 <!DOCTYPE html>
 <html lang="en">
@@ -35,11 +36,19 @@
   <a class="menu" href="">
     <img src="assets/help.svg" class="icono"> <p>ACERCA</p>
   </a>
-            
-  <a class="menu" href="login.php">
-    <img src="assets/login.svg" class="icono"> <p>INGRESA</p>
-  </a>
 
+  
+  <!-- esto hace q cuando no estas logeado muestre el boton de login pero si lo estas muestre el boton de logout -->
+  <?php if(isset($_SESSION['usuario'])): ?>
+    <a class="menu" href="logout.php">
+      <img src="assets/logout.svg" class="icono"> <p>CERRAR SESIÓN</p>
+    </a>
+  <?php else: ?>
+    <a class="menu" href="login.php">
+      <img src="assets/login.svg" class="icono"> <p>INGRESA</p>
+    </a>
+  <?php endif; ?>
+<!-- esto hace q cuando no estas logeado muestre el boton de login pero si lo estas muestre el boton de logout -->
 </div>
 
 
