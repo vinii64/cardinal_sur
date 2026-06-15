@@ -1,83 +1,108 @@
 @font-face {
   font-family: 'monofont';
   src: url('assets/monofonto.otf');
-
 }
+
 * {
   font-family: 'monofont', monospace;
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
 }
 
 body {
-  margin: 0;
-  
-  background-color: #3d3d3d;
+  background-color: #0b0b0b;
+  min-height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.login-container {
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  padding: 20px;
+}
+
+.login-card {
+  background: #1a1a1a;
+  padding: 32px;
+  width: 100%;
+  max-width: 360px;
+  border-radius: 15px;
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+}
+
+.logo {
+  display: flex;
+  justify-content: center;
+  padding: 8px 0;
+}
+
+.logo img {
+  width: 100%;
+  max-width: 280px; 
+  height: auto;
+}
+
+form {
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+}
+
+.login-card input {
+  width: 100%;
+  padding: 14px 16px;
+  border: 1px solid #333;
+
+  background: #2a2a2a;
+  color: white;
+  font-size: 15px;
+  outline: none;
+  transition: border-color 0.2s;
 }
 
 
-.login-container{
 
-    height: 100vh;
 
-    display:flex;
+.login-card button {
+  width: 100%;
+  padding: 14px;
+  border: none;
 
-    justify-content:center;
+  background: #fd5c01;
+  color: black;
+  font-weight: bold;
+  font-size: 15px;
+  cursor: pointer;
 
-    align-items:center;
-
+  margin-top: 4px;
 }
 
-.login-card{
-
-    background:#1a1a1a;
-
-    padding:40px;
-
-    width:350px;
-
-    border-radius:15px;
-
-    display:flex;
-
-    flex-direction:column;
-
-    gap:20px;
-
+.login-card button:hover {
+  background: #ff7b2f;
+  color: white;
 }
 
-.login-card h1{
-
-    color:#fd5c01;
-
-    text-align:center;
-
+.cartel {
+  text-align: center;
 }
 
-.login-card input{
-
-    padding:15px;
-
-    border:none;
-
-   
-
-    background:#2a2a2a;
-
-    color:white;
-
+.cartel p {
+  color: #888;
+  font-size: 14px;
 }
 
-.login-card button{
-
-    padding:15px;
-
-    border:none;
-
-    background:#fd5c01;
-
-    font-weight:bold;
-    
-
-    cursor:pointer;
-
+.cartel a {
+  color: #fd5c01;
+  text-decoration: none;
+  font-weight: bold;
 }
 
+.cartel a:hover {
+  text-decoration: underline;
+}

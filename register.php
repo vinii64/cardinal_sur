@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html>
 <head>
-    <title>Inicia sesión - Cardinal Sur Off Road</title>
+    <title>Regístrate - Cardinal Sur Off Road</title>
     <link rel="stylesheet" href="styles/login.css">
     <link rel="icon" type="image/x-icon" href="assets/favicon.png">
 </head>
@@ -11,25 +11,19 @@
     <div class="login-card">
 
         <div class="logo">
-            <img src="assets/logoLetras.png" alt="Cardinal Sur" >
+            <img src="assets/logoLetras.png" alt="Cardinal Sur">
         </div>
 
-        <form action="" method="post">
-
+        <form action="" method="POST">
             <input type="text" name="usuario" placeholder="Usuario" required>
-
+            <input type="email" name="email" placeholder="Email" required>
+            <input type="text" name="dni" placeholder="DNI" required>
             <input type="password" name="password" placeholder="Contraseña" required>
-
-            <button type="submit">Iniciar sesión</button>
-
+            <button type="submit">Registra tu cuenta</button>
         </form>
 
         <div class="cartel">
-            <p>¿No tenés cuenta?
-                <a href="register.php">
-                    Registrate
-                </a>
-            </p>
+            <p>¿Ya tenés cuenta? <a href="login.php">Iniciá sesión</a></p>
         </div>
 
     </div>
