@@ -28,17 +28,16 @@
     <img src="assets/map.svg" class="icono"> <p>TRAVESÍAS</p>
   </a>
 
-  <a class="menu" href="tienda.html">
-  <img src="assets/" class="icono">
-  <p>TIENDA</p>
+  <a class="menu" href="store.php">
+  <img src="assets/store.svg" class="icono"> <p>TIENDA</p>
   </a>
 
   <a class="menu" href="">
     <img src="assets/help.svg" class="icono"> <p>ACERCA</p>
   </a>
             
-  <a href="login.php" class="btnRegistro">
-    REGÍSTRATE
+  <a class="menu" href="login.php">
+    <img src="assets/login.svg" class="icono"> <p>INGRESA</p>
   </a>
 
 </div>

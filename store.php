@@ -7,10 +7,11 @@
 
     <link rel="stylesheet" href="styles/style.css">
     <link rel="icon" type="image/x-icon" href="assets/favicon.png">
-
-    <link rel="stylesheet" href="styles/tienda.css">
+    <link rel="stylesheet" href="styles/store.css">
 
 </head>
+
+
 <body>
 
 <div class="navbar"> 
@@ -20,46 +21,42 @@
   </a>
 
   <a class="menu" href="">
-    <img src="assets/image.svg" class="icono">
-    <p>FOTOS</p>
+    <img src="assets/image.svg" class="icono"> <p>FOTOS</p>
   </a>
 
   <a class="menu" href="">
-    <img src="assets/map.svg" class="icono">
-    <p>TRAVESÍAS</p>
+    <img src="assets/map.svg" class="icono"> <p>TRAVESÍAS</p>
   </a>
 
-  <a class="menu" href="tienda.html">
-    <i class="fas fa-store icono"></i>
-    <p>TIENDA</p>
+  <a class="menu" href="store.php">
+    <img src="assets/store.svg" class="icono"> <p>TIENDA</p>
   </a>
 
   <a class="menu" href="">
-    <img src="assets/help.svg" class="icono">
-    <p>ACERCA</p>
+    <img src="assets/help.svg" class="icono"> <p>ACERCA</p>
   </a>
 
-  <a class="menu carrito derecha" href="#" style="float:right;">
-
-    <p>CARRITO</p>
+  <a class="menu" href="">
+    <img src="assets/shopping.svg" class="icono"><p>CARRITO</p>
   </a>
 </div>
 
 
 <div class="tienda-container">
 
-    <h1>Tienda</h1>
+    <h1></h1>
 
     <div class="productos">
 
         <div class="card-producto">
-            <img src="assets/remera1.jpg">
+
+            <img src="assets/remera.png">
 
             <div class="info-producto">
                 <h2>Remera Cardinal Sur</h2>
-                <p>Algodón 100%</p>
+                <p>Remera negra lisa con estampado frontal</p>
 
-                <span>$25.000</span>
+                <span>$30.000</span>
 
                 <button>Agregar al Carrito</button>
             </div>
@@ -67,13 +64,13 @@
 
 
         <div class="card-producto">
-            <img src="assets/gorra1.jpg">
+            <img src="assets/gorra.png">
 
             <div class="info-producto">
                 <h2>Gorra Cardinal Sur</h2>
-                <p>Edición explorador</p>
+                <p>Gorra negra clásica con logo bordado al frente</p>
 
-                <span>$18.000</span>
+                <span>$15.000</span>
 
                 <button>Agregar al Carrito</button>
             </div>
@@ -81,17 +78,32 @@
 
 
         <div class="card-producto">
-            <img src="assets/taza1.jpg">
+            <img src="assets/banderin.png">
 
             <div class="info-producto">
                 <h2>Banderin Cardinal Sur</h2>
-                <p>Lorem ipsum dolor sit</p>
+                <p>Banderín naranja con diseño invertido y mástil negro</p>
 
-                <span>$12.000</span>
+                <span>$8.000</span>
 
                 <button>Agregar al Carrito</button>
             </div>
         </div>
+
+        
+        <div class="card-producto">
+            <img src="assets/taza.png">
+
+            <div class="info-producto">
+                <h2>Taza Cardinal Sur</h2>
+                <p>aza de cerámica negra mate con logo centrado.</p>
+
+                <span>$5.000</span>
+
+                <button>Agregar al Carrito</button>
+            </div>
+        </div>
+        
 
     </div>
 

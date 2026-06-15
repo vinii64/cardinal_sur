@@ -19,7 +19,7 @@
 .card-producto{
     background: #1a1a1a;
     overflow: hidden;
-    border-radius: 12px;
+    border-radius: 25px;
     transition: transform .3s;
 }
 
@@ -27,10 +27,13 @@
     transform: translateY(-8px);
 }
 
-.card-producto img{
-    width: 100%;
-    height: 300px;
-    object-fit: cover;
+.card-producto img {
+  width: 100%;
+  height: 260px;
+  object-fit: contain;
+  background: #fff;
+  padding: 16px;
+  box-sizing: border-box;
 }
 
 .info-producto{
@@ -67,6 +70,7 @@
     cursor: pointer;
 
     transition: .2s;
+    border-radius: 20px;
 }
 
 .info-producto button:hover{

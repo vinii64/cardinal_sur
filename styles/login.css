@@ -1,3 +1,19 @@
+@font-face {
+  font-family: 'monofont';
+  src: url('assets/monofonto.otf');
+
+}
+* {
+  font-family: 'monofont', monospace;
+}
+
+body {
+  margin: 0;
+  
+  background-color: #3d3d3d;
+}
+
+
 .login-container{
 
     height: 100vh;
@@ -42,7 +58,7 @@
 
     border:none;
 
-    border-radius:8px;
+   
 
     background:#2a2a2a;
 
@@ -59,7 +75,9 @@
     background:#fd5c01;
 
     font-weight:bold;
+    
 
     cursor:pointer;
 
 }
+

@@ -9,8 +9,8 @@ session_start();
 <head>
 
     <title>Login - Cardinal Sur</title>
-
     <link rel="stylesheet" href="styles/login.css">
+    
 
 </head>
 
@@ -18,27 +18,18 @@ session_start();
 
 <div class="login-container">
 
-    <form class="login-card" action="procesar_login.php" method="POST">
+    <form class="login-card" action="" method="POST">
 
-        <h1>Cardinal Sur</h1>
+        <h1 style="font-weight: bold;">
+            Cardinal Sur
+        </h1>
 
-        <input
-        type="text"
-        name="usuario"
-        placeholder="Usuario"
-        required>
+        <input type="text" name="usuario" placeholder="Usuario" required>
 
-        <input
-        type="password"
-        name="password"
-        placeholder="Contraseña"
-        required>
+        <input type="password" name="password" placeholder="Contraseña" required>
 
-        <button type="submit">
+        <button type="submit">Ingresar</button>
 
-            Ingresar
-
-        </button>
 
     </form>
 
