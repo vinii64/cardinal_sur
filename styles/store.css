@@ -19,7 +19,6 @@
 .card-producto{
     background: #1a1a1a;
     overflow: hidden;
-    border-radius: 25px;
     transition: transform .3s;
 }
 
@@ -70,7 +69,6 @@
     cursor: pointer;
 
     transition: .2s;
-    border-radius: 20px;
 }
 
 .info-producto button:hover{
