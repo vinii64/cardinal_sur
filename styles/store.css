@@ -74,3 +74,63 @@
 .info-producto button:hover{
     background: #ff7b2f;
 }
+
+/* Estilo para para la parte del total */
+.precioCarrito{
+    background: #1a1a1a;
+    color: #fff;
+    padding: 20px;
+    width: 100%;
+    max-width: 980px;
+    border-radius: 6px;
+    box-shadow: 0 8px 20px rgba(0,0,0,0.4);
+    box-sizing: border-box;
+    margin: 20px auto 40px auto;
+}
+
+.precioCarrito h3{
+    color: #fd5c01;
+    margin: 0 0 10px 0;
+}
+
+.precioCarrito p{
+    color: #aaa;
+    margin: 8px 0;
+}
+
+.precioCarrito span{
+    color: #fff;
+    font-weight: 700;
+}
+
+.precioCarrito .precioRow{
+    display: flex;
+    align-items: center;
+    gap: 16px;
+    justify-content: space-between;
+}
+
+.wspBtn{
+    background: #25D366;
+    color: #fff;
+    padding: 10px 14px;
+    border-radius: 6px;
+    text-decoration: none;
+    font-weight: 700;
+    transition: transform .12s ease;
+}
+
+.wspBtn:hover{
+    transform: translateY(-2px);
+}
+
+@media (max-width: 800px) {
+    .precioCarrito{
+        width: calc(100% - 40px);
+        margin: 16px auto;
+    }
+    .precioCarrito .precioRow{
+        flex-direction: column;
+        align-items: flex-start;
+    }
+}

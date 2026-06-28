@@ -56,9 +56,9 @@
                 <h2>Remera Cardinal Sur</h2>
                 <p>Remera negra lisa con estampado frontal</p>
 
-                <span>$30.000</span>
+            <span>$30.000</span>
 
-                <button>Agregar al Carrito</button>
+            <button class="agregarCarrito" value="30000">Agregar al Carrito</button>
             </div>
         </div>
 
@@ -70,9 +70,9 @@
                 <h2>Gorra Cardinal Sur</h2>
                 <p>Gorra negra clásica con logo bordado al frente</p>
 
-                <span>$15.000</span>
+            <span>$15.000</span>
 
-                <button>Agregar al Carrito</button>
+            <button class="agregarCarrito" value="15000">Agregar al Carrito</button>
             </div>
         </div>
 
@@ -84,9 +84,9 @@
                 <h2>Banderin Cardinal Sur</h2>
                 <p>Banderín naranja con diseño invertido y mástil negro</p>
 
-                <span>$8.000</span>
+            <span>$8.000</span>
 
-                <button>Agregar al Carrito</button>
+            <button class="agregarCarrito" value="8000">Agregar al Carrito</button>
             </div>
         </div>
 
@@ -98,9 +98,9 @@
                 <h2>Taza Cardinal Sur</h2>
                 <p>aza de cerámica negra mate con logo centrado.</p>
 
-                <span>$5.000</span>
+            <span>$5.000</span>
 
-                <button>Agregar al Carrito</button>
+            <button class="agregarCarrito" value="5000">Agregar al Carrito</button>
             </div>
         </div>
         
@@ -109,5 +109,16 @@
 
 </div>
 
-</body>
-</html>
+      <div class="precioCarrito">
+        <h3>Carrito</h3>
+        <div class="precioRow">
+          <p>Total: <span id="totalCarrito">$0</span></p>
+          <p>Items: <span id="cantidadCarrito">0</span></p>
+          <a class="wspBtn" href="https://chat.whatsapp.com/GSz9qRSSgb8JSdfMf68AOc" target="_blank">Contactar por WhatsApp</a>
+        </div>
+      </div>
+
+      <script src="scripts/store.js"></script>
+
+    </body>
+    </html>
