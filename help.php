@@ -16,31 +16,31 @@ if (session_status() === PHP_SESSION_NONE) {
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
 </head>
 <body>
-
 <div class="navbar"> 
 
 
-  <a class="menu" href="">
+  <a class="menu" href="index.php">
     <img src="assets/logoLetras.png" class="iconoCardinal">
   </a>
 
-  <a class="menu" href="">
-    <img src="assets/image.svg" class="icono"> <p>FOTOS</p>
-  </a>
-
-  <a class="menu" href="">
-    <img src="assets/map.svg" class="icono"> <p>TRAVESÍAS</p>
+  <a class="menu" href="gallery.php">
+    <img src="assets/image.svg" class="icono"> <p>GALERÍA</p>
   </a>
 
   <a class="menu" href="store.php">
   <img src="assets/store.svg" class="icono"> <p>TIENDA</p>
   </a>
 
-  <a class="menu" href="">
+  <a class="menu" href="help.php">
     <img src="assets/help.svg" class="icono"> <p>ACERCA</p>
   </a>
 
-  
+  <?php if (isset($_SESSION['usuario']) && $_SESSION['admin'] == 1): ?>
+    <a class="menu" href="adminGaleria.php">
+      <img src="assets/admin.svg" class="icono"> <p>ADMIN</p>
+    </a>
+  <?php endif; ?>
+
   <!-- esto hace q cuando no estas logeado muestre el boton de login pero si lo estas muestre el boton de logout -->
   <?php if(isset($_SESSION['usuario'])): ?>
     <a class="menu" href="logout.php">

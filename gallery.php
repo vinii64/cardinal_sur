@@ -7,14 +7,12 @@ include('conexion.php');
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Cardinal Sur</title>
-    <link rel="stylesheet" href="styles/style.css">
+    <title>Galeria - Cardinal Sur</title>
+    <link rel="stylesheet" href="styles/gallery.css">
     <link rel="icon" type="image/x-icon" href="assets/favicon.png">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
 </head>
-<body>
-    
-<div class="navbar"> 
+<body><div class="navbar"> 
 
 
   <a class="menu" href="index.php">
@@ -53,40 +51,42 @@ include('conexion.php');
 </div>
 
 
-<div class="headerContainer">
-  <img src="assets/headerFoto.png" class="imagen" />
+
+<main class="gallery-section">
+
+  <h1 class="gallery-title">GALERÍA</h1>
+
+  <div class="gallery-grid">
+
+    <?php
+    $resultado = $conexion->query("SELECT id_foto, titulo FROM galeria ORDER BY id_foto DESC");
+
+    if ($resultado && $resultado->num_rows > 0) {
+        while ($fila = $resultado->fetch_assoc()) {
+            $alt = $fila['titulo'] !== null && $fila['titulo'] !== '' ? $fila['titulo'] : 'Foto de la galería';
+    ?>
+
+    <div class="gallery-item">
+      <img src="verFoto.php?id=<?php echo $fila['id_foto']; ?>" alt="<?php echo htmlspecialchars($alt); ?>">
+    </div>
+
+    <?php
+        }
+    } else {
+        echo '<p class="gallery-empty">Todavía no hay fotos cargadas.</p>';
+    }
+    ?>
+
+  </div>
+
+</main>
+
+
+<!-- Lightbox: se muestra al hacer click en una imagen -->
+<div class="lightbox" id="lightbox">
+  <span class="lightbox-close" id="lightboxClose">&times;</span>
+  <img src="" alt="" id="lightboxImg">
 </div>
-
-<div class="galeria">
-
-  <div class="item">
-    <img src="assets/fotoGaleria1.png" />
-    <div class="overlay"><p>GALERÍA</p></div>
-  </div>
-
-  <div class="item">
-    <img src="assets/fotoGaleria2.png" />
-    <div class="overlay"><p>TRAVESÍAS</p></div>
-  </div>
-
-  <div class="item">
-    <img src="assets/fotoGaleria3.png" />
-    <div class="overlay"><p>APORTES SOLIDARIOS</p></div>
-  </div>
-
-  <div class="item">
-    <img src="assets/fotoGaleria4.png" />
-    <div class="overlay"><p>EVENTOS</p></div>
-  </div>
-
-  <div class="item">
-    <img src="assets/fotoGaleria5.png" />
-    <div class="overlay"><p>PROXIMAMENTE</p></div>
-  </div>
-
-</div>
-
-
 
 
 <footer>
@@ -121,6 +121,7 @@ include('conexion.php');
 
 </footer>
 
-<script src="script.js"></script>
+<script src="scripts/gallery.js"></script>
+
 </body>
 </html>

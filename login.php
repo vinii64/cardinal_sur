@@ -15,6 +15,7 @@ if (isset($_POST['usuario'])) {
     if ($datos) {
         $_SESSION['usuario'] = $datos['usuario'];
         $_SESSION['id'] = $datos['id'];
+        $_SESSION['admin'] = $datos['admin'];
         echo "<script>alert('Sesión iniciada correctamente.'); window.location.href='index.php';</script>";
     } else {
         echo "<script>alert('Usuario o contraseña incorrectos')</script>";

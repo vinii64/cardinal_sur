@@ -1,0 +1,375 @@
+@font-face {
+  font-family: 'monofont';
+  src: url('assets/monofonto.otf');
+
+}
+* {
+  font-family: 'monofont', monospace;
+}
+
+body {
+  margin: 0;
+  
+  background-color: #3d3d3d;
+}
+
+/* -----NAVBAR----- */
+.navbar {
+  position: fixed; 
+  top: 0;
+  left: 0;
+  right: 0;
+  width: 100%;
+  background-color: #0b0b0b;
+  display: flex;
+  align-items: center;
+  z-index: 10;
+}
+
+.navbar a {
+  display: flex;
+  padding: 12px;
+  font-size: 17px;
+  text-align: center;
+  color: white;
+  text-decoration: none;
+}
+
+.navbar a:hover {
+  background-color: #1a1a1a;
+}
+.navbar a:last-child {
+  margin-left: auto; /*esto hace q el login de la navbar este a la derecha del todo*/
+}
+
+
+
+.menu {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  color: #fd5c01;
+}
+
+.icono {
+  width: 40px;
+  height: 40px;
+}
+
+.iconoCardinal {
+  width: 80px;
+  height: 40px;
+  padding-top: 10px;
+}
+
+.menu p {
+  margin: 0;
+  text-align: center;
+  font-weight: bold;
+  color: #fd5c01;
+}
+
+
+
+/* ----FOTO PRINCIPAL----*/
+.headerContainer {
+  height: 100vh;
+  overflow: hidden;
+}
+
+.imagen {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  display: block;
+}
+
+
+
+.galeria {
+  display: flex;
+  gap: 8px;
+  padding: 20px;
+}
+
+.item {
+  position: relative;
+  flex: 1;
+  overflow: hidden;
+  cursor: pointer;
+}
+
+.item img {
+  width: 100%;
+  height: 250px;
+  object-fit: cover;
+  display: block;
+}
+
+.overlay {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: #fd5c01;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  opacity: 0;
+  transition: opacity 0.3s ease;
+}
+
+.overlay p {
+  color: rgb(0, 0, 0);
+  font-weight: bold;
+  font-size: 18px;
+  letter-spacing: 2px;
+}
+
+.item:hover .overlay {
+  opacity: 1;
+}
+
+footer {
+  background: #1a1a1a;
+  color: #888;
+  padding: 48px 40px 24px;
+  font-size: 14px;
+
+}
+
+.footer-grid {
+  display: grid;
+  grid-template-columns: 2fr 1fr 1fr;
+  gap: 40px;
+  margin-bottom: 40px;
+}
+
+footer h3 {
+  color: #fff;
+  font-size: 22px;
+  margin: 0 0 12px;
+  border-bottom: 2px solid #fd5c01;
+  padding-bottom: 12px;
+  width: fit-content;
+}
+
+footer span {
+  display: block;
+  font-size: 11px;
+  letter-spacing: 2px;
+  text-transform: uppercase;
+  color: #555;
+  margin-bottom: 16px;
+}
+
+footer a {
+  display: block;
+  color: #aaa;
+  text-decoration: none;
+  margin-bottom: 10px;
+  transition: color 0.2s;
+}
+.btnRegistro{
+
+    position: absolute;
+
+    top: 75%;
+
+    left: 50%;
+
+    transform: translate(-50%, -50%);
+
+    padding: 15px 35px;
+
+    background: #fd5c01;
+
+    color: black;
+
+    text-decoration: none;
+
+    font-size: 20px;
+
+    font-weight: bold;
+
+
+    transition: .3s;
+
+    z-index: 5;
+
+}
+
+.btnRegistro:hover{
+
+    background: #ff7b2f;
+
+    transform: translate(-50%, -50%) scale(1.05);
+
+}
+
+
+/* -----PANEL DE ADMIN----- */
+
+nav {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  width: 100%;
+  background-color: #0b0b0b;
+  display: flex;
+  align-items: center;
+  z-index: 10;
+}
+
+nav a {
+  display: flex;
+  padding: 12px 18px;
+  font-size: 17px;
+  text-align: center;
+  color: white;
+  text-decoration: none;
+  font-weight: bold;
+}
+
+nav a:hover {
+  background-color: #1a1a1a;
+  color: #fd5c01;
+}
+
+nav a:last-child {
+  margin-left: auto;
+}
+
+.cartel {
+  padding: 100px 40px 30px;
+  text-align: center;
+}
+
+.cartel h1 {
+  color: #fff;
+  font-size: 30px;
+  margin: 0 0 12px;
+  display: inline-block;
+  
+  padding-bottom: 12px;
+}
+
+.mensaje {
+  max-width: 600px;
+  margin: 0 auto 20px;
+  padding: 14px 20px;
+  background-color: #1a1a1a;
+  border-left: 4px solid #fd5c01;
+  color: #fff;
+  font-size: 14px;
+}
+
+.agregar {
+  display: flex;
+  justify-content: center;
+  padding: 0 20px 40px;
+}
+
+.contenedor {
+  background-color: #1a1a1a;
+  padding: 30px 40px;
+  width: 100%;
+  max-width: 420px;
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+
+.contenedor h1 {
+  color: #fd5c01;
+  font-size: 22px;
+  margin: 0 0 10px;
+
+  padding-bottom: 10px;
+  width: fit-content;
+}
+
+.contenedor label {
+  color: #ccc;
+  font-size: 14px;
+}
+
+.contenedor input[type="file"],
+.contenedor input[type="text"],
+.contenedor select {
+  background-color: #3d3d3d;
+  border: 1px solid #555;
+  color: #fff;
+  padding: 10px;
+  font-family: 'monofont', monospace;
+}
+
+.contenedor button,
+.inventario button {
+  background-color: #fd5c01;
+  color: #000;
+  border: none;
+  padding: 12px;
+  font-weight: bold;
+  cursor: pointer;
+  transition: 0.2s;
+  font-family: 'monofont', monospace;
+}
+
+.contenedor button:hover,
+.inventario button:hover {
+  background-color: #ff7b2f;
+  transform: scale(1.02);
+}
+
+.inventario {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(240px, 1fr));
+  gap: 24px;
+  padding: 0 40px 60px;
+}
+
+.carta {
+  background-color: #1a1a1a;
+  overflow: hidden;
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  padding-bottom: 16px;
+}
+
+.carta img {
+  width: 100%;
+  aspect-ratio: 4 / 3;
+  object-fit: cover;
+  display: block;
+}
+
+.carta form {
+  display: flex;
+  gap: 8px;
+  padding: 0 14px;
+}
+
+.carta input[type="text"] {
+  flex: 1;
+  background-color: #3d3d3d;
+  border: 1px solid #555;
+  color: #fff;
+  padding: 8px 10px;
+  font-family: 'monofont', monospace;
+  font-size: 13px;
+}
+
+.carta button {
+  font-size: 13px;
+  padding: 8px 14px;
+  white-space: nowrap;
+}
+
+
+
+
