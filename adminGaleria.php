@@ -9,7 +9,7 @@ if (!isset($_SESSION['usuario'])) {
 
 $id = (int)$_SESSION['id'];
 
-/* Chequeo de admin con prepared statement */
+
 $stmtAdmin = $conexion->prepare("SELECT admin FROM usuarios WHERE id = ?");
 $stmtAdmin->bind_param('i', $id);
 $stmtAdmin->execute();
@@ -23,12 +23,12 @@ if (!$admin || $admin['admin'] != 1) {
 
 $mensaje = '';
 
-/* Tipos de imagen permitidos y tamaño máximo (5MB) */
+
 $tiposPermitidos = ['image/jpeg', 'image/png', 'image/webp'];
 $tamanoMaximo = 5 * 1024 * 1024;
 
 
-/* AGREGAR FOTO */
+/* AGREgAR FOTO */
 if (isset($_POST['accion']) && $_POST['accion'] == 'agregar') {
 
     if (!isset($_FILES['archivo']) || $_FILES['archivo']['error'] != UPLOAD_ERR_OK) {
@@ -78,18 +78,7 @@ if (isset($_POST['accion']) && $_POST['accion'] == 'eliminar') {
     $stmt->close();
 }
 
-/* ACTUALIZAR TITULO */
-if (isset($_POST['accion']) && $_POST['accion'] == 'actualizar') {
 
-    $id_foto = (int)$_POST['id_foto'];
-    $titulo = trim($_POST['titulo'] ?? '');
-
-    $stmt = $conexion->prepare("UPDATE galeria SET titulo = ? WHERE id_foto = ?");
-    $stmt->bind_param('si', $titulo, $id_foto);
-
-    $mensaje = $stmt->execute() ? 'Foto actualizada correctamente.' : 'Error al actualizar la foto.';
-    $stmt->close();
-}
 ?>
 
 <!DOCTYPE html>
