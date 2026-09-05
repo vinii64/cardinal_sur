@@ -33,7 +33,7 @@ include('conexion.php');
   <img src="assets/store.svg" class="icono"> <p>TIENDA</p>
   </a>
 
-  <a class="menu" href="">
+  <a class="menu" href="help.php">
     <img src="assets/help.svg" class="icono"> <p>ACERCA</p>
   </a>
 
