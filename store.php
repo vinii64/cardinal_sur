@@ -1,3 +1,6 @@
+<?php
+session_start();
+?>
 <!DOCTYPE html>
 <html lang="es">
 <head>
@@ -34,23 +37,41 @@
     <img src="assets/help.svg" class="icono"> <p>ACERCA</p>
   </a>
 
-  <?php if (isset($_SESSION['usuario']) && $_SESSION['admin'] == 1): ?>
+  <?php if (isset($_SESSION['usuario']) && isset($_SESSION['admin']) && $_SESSION['admin'] == 1): ?>
     <a class="menu" href="adminGaleria.php">
       <img src="assets/admin.svg" class="icono"> <p>ADMIN</p>
     </a>
+
   <?php endif; ?>
 
-  <!-- esto hace q cuando no estas logeado muestre el boton de login pero si lo estas muestre el boton de logout -->
-  <?php if(isset($_SESSION['usuario'])): ?>
+  <!-- si hay un socio logueado muestra MI CUENTA, si no muestra UNIRSE -->
+<?php if (isset($_SESSION['socio_id'])): ?>
+  <a class="menu" href="miCuenta.php">
+    <img src="assets/socio.svg" class="icono"> <p>MI CUENTA</p>
+  </a>
+
+<?php elseif (!isset($_SESSION['admin']) || $_SESSION['admin'] != 1): ?>
+  <a class="menu" href="sociosRegistro.php">
+    <img src="assets/socio.svg" class="icono"> <p>UNIRSE</p>
+  </a>
+<?php endif; ?>
+
+
+
+  <!-- esto hace q cuando no estas logeado (admin o socio) muestre el boton de login pero si lo estas muestre el boton de logout -->
+  <?php if (isset($_SESSION['usuario']) || isset($_SESSION['socio_id'])): ?>
     <a class="menu" href="logout.php">
       <img src="assets/logout.svg" class="icono"> <p>CERRAR SESIÓN</p>
     </a>
   <?php else: ?>
-    <a class="menu" href="login.php">
+    <a class="menu" href="loginSocio.php">
       <img src="assets/login.svg" class="icono"> <p>INGRESA</p>
     </a>
   <?php endif; ?>
 <!-- esto hace q cuando no estas logeado muestre el boton de login pero si lo estas muestre el boton de logout -->
+
+
+
 </div>
 
 
@@ -70,7 +91,6 @@
 
             <span>$30.000</span>
 
-            <button class="agregarCarrito" value="30000">Agregar al Carrito</button>
             </div>
         </div>
 
@@ -84,7 +104,7 @@
 
             <span>$15.000</span>
 
-            <button class="agregarCarrito" value="15000">Agregar al Carrito</button>
+
             </div>
         </div>
 
@@ -98,7 +118,7 @@
 
             <span>$8.000</span>
 
-            <button class="agregarCarrito" value="8000">Agregar al Carrito</button>
+
             </div>
         </div>
 
@@ -112,7 +132,7 @@
 
             <span>$5.000</span>
 
-            <button class="agregarCarrito" value="5000">Agregar al Carrito</button>
+
             </div>
         </div>
         
@@ -122,11 +142,10 @@
 </div>
 
       <div class="precioCarrito">
-        <h3>Carrito</h3>
+        <h3>Contactanos</h3>
         <div class="precioRow">
-          <p>Total: <span id="totalCarrito">$0</span></p>
-          <p>Items: <span id="cantidadCarrito">0</span></p>
-          <a class="wspBtn" href="https://chat.whatsapp.com/GSz9qRSSgb8JSdfMf68AOc" target="_blank">Contactar por WhatsApp</a>
+          <a class="wspBtn" href="https://chat.whatsapp.com/GSz9qRSSgb8JSdfMf68AOc" target="_blank">WhatsApp</a>
+          
         </div>
       </div>
 

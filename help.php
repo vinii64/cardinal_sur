@@ -15,8 +15,7 @@ if (session_status() === PHP_SESSION_NONE) {
     <link rel="icon" type="image/x-icon" href="assets/favicon.png">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
 </head>
-<body>
-<div class="navbar"> 
+<body><div class="navbar"> 
 
 
   <a class="menu" href="index.php">
@@ -35,23 +34,41 @@ if (session_status() === PHP_SESSION_NONE) {
     <img src="assets/help.svg" class="icono"> <p>ACERCA</p>
   </a>
 
-  <?php if (isset($_SESSION['usuario']) && $_SESSION['admin'] == 1): ?>
+  <?php if (isset($_SESSION['usuario']) && isset($_SESSION['admin']) && $_SESSION['admin'] == 1): ?>
     <a class="menu" href="adminGaleria.php">
       <img src="assets/admin.svg" class="icono"> <p>ADMIN</p>
     </a>
+
   <?php endif; ?>
 
-  <!-- esto hace q cuando no estas logeado muestre el boton de login pero si lo estas muestre el boton de logout -->
-  <?php if(isset($_SESSION['usuario'])): ?>
+  <!-- si hay un socio logueado muestra MI CUENTA, si no muestra UNIRSE -->
+<?php if (isset($_SESSION['socio_id'])): ?>
+  <a class="menu" href="miCuenta.php">
+    <img src="assets/socio.svg" class="icono"> <p>MI CUENTA</p>
+  </a>
+
+<?php elseif (!isset($_SESSION['admin']) || $_SESSION['admin'] != 1): ?>
+  <a class="menu" href="sociosRegistro.php">
+    <img src="assets/socio.svg" class="icono"> <p>UNIRSE</p>
+  </a>
+<?php endif; ?>
+
+
+
+  <!-- esto hace q cuando no estas logeado (admin o socio) muestre el boton de login pero si lo estas muestre el boton de logout -->
+  <?php if (isset($_SESSION['usuario']) || isset($_SESSION['socio_id'])): ?>
     <a class="menu" href="logout.php">
       <img src="assets/logout.svg" class="icono"> <p>CERRAR SESIÓN</p>
     </a>
   <?php else: ?>
-    <a class="menu" href="login.php">
+    <a class="menu" href="loginSocio.php">
       <img src="assets/login.svg" class="icono"> <p>INGRESA</p>
     </a>
   <?php endif; ?>
 <!-- esto hace q cuando no estas logeado muestre el boton de login pero si lo estas muestre el boton de logout -->
+
+
+
 </div>
 
 

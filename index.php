@@ -33,56 +33,75 @@ include('conexion.php');
     <img src="assets/help.svg" class="icono"> <p>ACERCA</p>
   </a>
 
-  <?php if (isset($_SESSION['usuario']) && $_SESSION['admin'] == 1): ?>
+  <?php if (isset($_SESSION['usuario']) && isset($_SESSION['admin']) && $_SESSION['admin'] == 1): ?>
     <a class="menu" href="adminGaleria.php">
       <img src="assets/admin.svg" class="icono"> <p>ADMIN</p>
     </a>
+
   <?php endif; ?>
 
-  <!-- esto hace q cuando no estas logeado muestre el boton de login pero si lo estas muestre el boton de logout -->
-  <?php if(isset($_SESSION['usuario'])): ?>
+  <!-- si hay un socio logueado muestra MI CUENTA, si no muestra UNIRSE -->
+<?php if (isset($_SESSION['socio_id'])): ?>
+  <a class="menu" href="miCuenta.php">
+    <img src="assets/socio.svg" class="icono"> <p>MI CUENTA</p>
+  </a>
+
+<?php elseif (!isset($_SESSION['admin']) || $_SESSION['admin'] != 1): ?>
+  <a class="menu" href="sociosRegistro.php">
+    <img src="assets/socio.svg" class="icono"> <p>UNIRSE</p>
+  </a>
+<?php endif; ?>
+
+
+
+  <!-- esto hace q cuando no estas logeado (admin o socio) muestre el boton de login pero si lo estas muestre el boton de logout -->
+  <?php if (isset($_SESSION['usuario']) || isset($_SESSION['socio_id'])): ?>
     <a class="menu" href="logout.php">
       <img src="assets/logout.svg" class="icono"> <p>CERRAR SESIÓN</p>
     </a>
   <?php else: ?>
-    <a class="menu" href="login.php">
+    <a class="menu" href="loginSocio.php">
       <img src="assets/login.svg" class="icono"> <p>INGRESA</p>
     </a>
   <?php endif; ?>
 <!-- esto hace q cuando no estas logeado muestre el boton de login pero si lo estas muestre el boton de logout -->
+
+
+
 </div>
 
 
 <div class="headerContainer">
   <img src="assets/headerFoto.png" class="imagen" />
 </div>
-
 <div class="galeria">
 
-  <div class="item">
-    <img src="assets/fotoGaleria1.png" />
+  <a href="gallery.php" class="item">
+    <img src="assets/fotoGaleria1.png" alt="Galería" />
     <div class="overlay"><p>GALERÍA</p></div>
-  </div>
+  </a>
 
-  <div class="item">
-    <img src="assets/fotoGaleria2.png" />
-    <div class="overlay"><p>TRAVESÍAS</p></div>
-  </div>
+  <a href="help.php" class="item">
+    <img src="assets/fotoGaleria2.png" alt="Acerca de nosotros" />
+    <div class="overlay"><p>ACERCA DE NOSOTROS</p></div>
+  </a>
 
-  <div class="item">
-    <img src="assets/fotoGaleria3.png" />
-    <div class="overlay"><p>APORTES SOLIDARIOS</p></div>
-  </div>
+    <a href="sociosRegistro.php" class="item">
+    <img src="assets/fotoGaleria5.png" alt="Próximamente" />
+    <div class="overlay"><p>HACETE SOCIO</p></div>
+  </a>
 
-  <div class="item">
-    <img src="assets/fotoGaleria4.png" />
-    <div class="overlay"><p>EVENTOS</p></div>
-  </div>
 
-  <div class="item">
-    <img src="assets/fotoGaleria5.png" />
-    <div class="overlay"><p>PROXIMAMENTE</p></div>
-  </div>
+  <a href="https://cardinalsuroffroad.taplink.site/" class="item">
+    <img src="assets/fotoGaleria4.png" alt="Eventos" />
+    <div class="overlay"><p>REDES SOCIALES</p></div>
+  </a>
+
+    <a href="store.php" class="item">
+    <img src="assets/fotoGaleria3.png" alt="Aportes solidarios" />
+    <div class="overlay"><p>NUESTRA TIENDA</p></div>
+  </a>
+
 
 </div>
 

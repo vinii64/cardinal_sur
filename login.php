@@ -49,13 +49,7 @@ if (isset($_POST['usuario'])) {
 
         </form>
 
-        <div class="cartel">
-            <p>¿No tenés cuenta?
-                <a href="register.php">
-                    Registrate
-                </a>
-            </p>
-        </div>
+
 
     </div>
 </div>
