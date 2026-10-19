@@ -76,51 +76,53 @@
 }
 
 /* Estilo para para la parte del total */
-.precioCarrito{
+.precioCarrito {
     background: #1a1a1a;
     color: #fff;
-    padding: 20px;
-    width: 100%;
-    max-width: 980px;
+    padding: 15px;
+    width: 90%;
+    max-width: 400px;
 
-    box-shadow: 0 8px 20px rgba(0,0,0,0.4);
+    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.4);
     box-sizing: border-box;
     margin: 20px auto 40px auto;
+    text-align: center;
 }
 
-.precioCarrito h3{
+.precioCarrito h3 {
     color: #fd5c01;
     margin: 0 0 10px 0;
 }
 
-.precioCarrito p{
+.precioCarrito p {
     color: #aaa;
     margin: 8px 0;
 }
 
-.precioCarrito span{
+.precioCarrito span {
     color: #fff;
     font-weight: 700;
 }
 
-.precioCarrito .precioRow{
+.precioCarrito .precioRow {
     display: flex;
     align-items: center;
+    justify-content: center;
     gap: 16px;
-    justify-content: space-between;
+    flex-wrap: wrap;
 }
 
-.wspBtn{
+.wspBtn {
+    display: inline-block;
     background: #25D366;
     color: #fff;
     padding: 10px 14px;
-    border-radius: 6px;
     text-decoration: none;
     font-weight: 700;
     transition: transform .12s ease;
 }
 
-.wspBtn:hover{
+.wspBtn:hover {
     transform: translateY(-2px);
 }
 

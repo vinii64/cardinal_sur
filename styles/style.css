@@ -194,7 +194,7 @@ footer a {
 
     font-weight: bold;
 
-    border-radius: 10px;
+  
 
     transition: .3s;
 
@@ -211,5 +211,42 @@ footer a {
 }
 
 
+
+
+
+
+
+
+
+        .cuenta-container { max-width: 1100px; margin: 0 auto; padding: 120px 20px 60px; color: #fff; }
+        .cuenta-container h2 { margin: 0 0 6px; color: #fd5c01; font-size: 28px; letter-spacing: 2px; text-transform: uppercase; }
+        .subtitulo { margin: 0 0 20px; color: #aaa; font-size: 14px; border-bottom: 2px solid #fd5c01; padding-bottom: 12px; }
+
+        .banner { padding: 16px 20px; margin-bottom: 20px; background: #1a1a1a; }
+        .banner strong { display: block; font-size: 18px; margin-bottom: 4px; }
+        .banner.ok strong { color: #2ecc71; }
+        .banner.deuda strong { color: #e74c3c; }
+        .banner p { margin: 4px 0 0; color: #ccc; font-size: 14px; }
+
+        .como-pagar { background: #1a1a1a; padding: 16px 20px; margin-bottom: 28px; }
+        .como-pagar h3 { margin: 0 0 10px; color: #fd5c01; letter-spacing: 1px; text-transform: uppercase; font-size: 16px; }
+        .como-pagar p { margin: 4px 0; color: #ddd; }
+        .como-pagar span { color: #888; }
+
+        .selector-anio { display: flex; align-items: center; gap: 14px; margin-bottom: 8px; }
+        .selector-anio a { background: #0b0b0b; color: #fd5c01; text-decoration: none; padding: 8px 16px; font-weight: bold; transition: .3s; }
+        .selector-anio a:hover { background: #1a1a1a; }
+        .selector-anio strong { font-size: 24px; }
+        .resumen { color: #aaa; font-size: 14px; margin: 0 0 18px; }
+
+        .meses { display: grid; grid-template-columns: repeat(auto-fill, minmax(200px, 1fr)); gap: 12px; }
+        .mes { background: #1a1a1a; padding: 14px; border: 2px solid #0b0b0b; display: flex; flex-direction: column; gap: 6px; }
+        .mes h3 { margin: 0; font-size: 18px; }
+        .mes .estado { font-size: 12px; letter-spacing: 2px; font-weight: bold; }
+        .mes .detalle { font-size: 13px; opacity: .85; min-height: 17px; }
+        .mes.pagado { background: #fd5c01; color: #000; border-color: #fd5c01; }
+        .mes.adeudado { border-color: #c0392b; }
+        .mes.adeudado .estado { color: #e74c3c; }
+        .mes.futuro, .mes.previo { opacity: .5; }
 
 

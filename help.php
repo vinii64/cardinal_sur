@@ -15,43 +15,60 @@ if (session_status() === PHP_SESSION_NONE) {
     <link rel="icon" type="image/x-icon" href="assets/favicon.png">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
 </head>
-<body>
-
-<div class="navbar"> 
+<body><div class="navbar"> 
 
 
-  <a class="menu" href="">
+  <a class="menu" href="index.php">
     <img src="assets/logoLetras.png" class="iconoCardinal">
   </a>
 
-  <a class="menu" href="">
-    <img src="assets/image.svg" class="icono"> <p>FOTOS</p>
-  </a>
-
-  <a class="menu" href="">
-    <img src="assets/map.svg" class="icono"> <p>TRAVESÍAS</p>
+  <a class="menu" href="gallery.php">
+    <img src="assets/image.svg" class="icono"> <p>GALERÍA</p>
   </a>
 
   <a class="menu" href="store.php">
   <img src="assets/store.svg" class="icono"> <p>TIENDA</p>
   </a>
 
-  <a class="menu" href="">
+  <a class="menu" href="help.php">
     <img src="assets/help.svg" class="icono"> <p>ACERCA</p>
   </a>
 
-  
-  <!-- esto hace q cuando no estas logeado muestre el boton de login pero si lo estas muestre el boton de logout -->
-  <?php if(isset($_SESSION['usuario'])): ?>
+  <?php if (isset($_SESSION['usuario']) && isset($_SESSION['admin']) && $_SESSION['admin'] == 1): ?>
+    <a class="menu" href="adminGaleria.php">
+      <img src="assets/admin.svg" class="icono"> <p>ADMIN</p>
+    </a>
+
+  <?php endif; ?>
+
+  <!-- si hay un socio logueado muestra MI CUENTA, si no muestra UNIRSE -->
+<?php if (isset($_SESSION['socio_id'])): ?>
+  <a class="menu" href="miCuenta.php">
+    <img src="assets/socio.svg" class="icono"> <p>MI CUENTA</p>
+  </a>
+
+<?php elseif (!isset($_SESSION['admin']) || $_SESSION['admin'] != 1): ?>
+  <a class="menu" href="sociosRegistro.php">
+    <img src="assets/socio.svg" class="icono"> <p>UNIRSE</p>
+  </a>
+<?php endif; ?>
+
+
+
+  <!-- esto hace q cuando no estas logeado (admin o socio) muestre el boton de login pero si lo estas muestre el boton de logout -->
+  <?php if (isset($_SESSION['usuario']) || isset($_SESSION['socio_id'])): ?>
     <a class="menu" href="logout.php">
       <img src="assets/logout.svg" class="icono"> <p>CERRAR SESIÓN</p>
     </a>
   <?php else: ?>
-    <a class="menu" href="login.php">
+    <a class="menu" href="loginSocio.php">
       <img src="assets/login.svg" class="icono"> <p>INGRESA</p>
     </a>
   <?php endif; ?>
 <!-- esto hace q cuando no estas logeado muestre el boton de login pero si lo estas muestre el boton de logout -->
+
+
+
 </div>
 
 
