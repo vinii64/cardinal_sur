@@ -99,7 +99,7 @@ body {
 
 .gallery-item {
     overflow: hidden;
-    border-radius: 6px;
+
     background-color: #1a1a1a;
     aspect-ratio: 4 / 3;
     cursor: pointer;
@@ -138,7 +138,7 @@ body {
 .lightbox img {
     max-width: 90%;
     max-height: 85%;
-    border-radius: 4px;
+
 }
 
 .lightbox-close {
